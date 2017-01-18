@@ -1,0 +1,75 @@
+-----------------------------WM8962---------------------------------
+
+查看音量命令输入amixer cset name='Headphone Volume'
+  串口会回显
+  numid=25,iface=MIXER,name='Headphone Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=100,100
+  | dBscale-min=-121.00dB,step=1.00dB,mute=1
+
+min=0,表示最小音量
+max=127表示最大音量
+values=100,100表示左右声道音量开到了100
+--------------------------------------------------------------
+如果要将音量设置成90
+设置音量 amixer cset name='Headphone Volume' 90
+
+然会串口就会回显到90
+root@imx6qdlsolo:/# amixer cset name='Headphone Volume' 90   
+numid=25,iface=MIXER,name='Headphone Volume'
+  ; type=INTEGER,access=rw---R--,values=2,min=0,max=127,step=0
+  : values=90,90
+  | dBscale-min=-121.00dB,step=1.00dB,mute=1
+
+
+注意...音量要设置到80以上才会有明显的音量调节反应，80以下听不出任何声音变化；
+
+
+//////////////////录音增益控制////////////////////////////////////
+numid=10,iface=MIXER,name='Capture Switch' 这个要打开
+
+输入命令amixer cset name='Capture Switch' on
+
+
+numid=6,iface=MIXER,name='MIXINR PGA Volume'  这个是录音增益调节一共有7个档位，开机后默认是0挡。设置到3挡就很明显了，设置到5挡声音就很大，设置到7挡就声音超级大
+
+我设置的5挡，你可以根据情况自己调节
+输入命令amixer cset name='MIXINR PGA Volume' 5
+
+
+
+
+
+--------------------------------------------------查看IMX6的设备唯一ID号---------------------------------
+root@imx6qsabresd:/sys/fsl_otp# cat HW_OCOTP_CFG1
+root@imx6qsabresd:/sys/fsl_otp# cat HW_OCOTP_CFG0
+设备号就放在HW_OCOTP_CFG0 HW_OCOTP_CFG1寄存器里面。 但是后面还有HW_OCOTP_CFG2 HW_OCOTP_CFG3自行查看
+
+
+
+
+
+---------------------------------------------------IMX6应用层程序编译器及编译命令-------------------------------------------------
+
+导入各种环境变量source /opt/poky/1.8/environment-setup-cortexa7hf-vfp-neon-poky-linux-gnueabi
+
+CC="arm-poky-linux-gnueabi-gcc  -march=armv7-a -mthumb-interwork -mfloat-abi=hard -mfpu=neon -mtune=cortex-a9 --sysroot=/opt/poky/1.8/sysroots/cortexa7hf-vfp-neon-poky-linux-gnueabi"
+
+执行环境变量之后就可以编译应用程序了，这个Poky编译器还可以编译动态库，比如wifi库 、蓝牙库。
+
+$CC -o hello hello.c
+
+
+
+------------------------------------------------------IMX6查看芯片本身寄存器是否操作----------------------------------------------------------
+进入根文件系统/unit_test/memtools
+在unit_test目录下执行shell文件./memtools
+然后配置里面的东西
+
+
+
+
+
+
+
+
