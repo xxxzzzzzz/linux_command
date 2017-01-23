@@ -1,101 +1,100 @@
-1.configuer ÅäÖÃÎÄ¼şÊ¹ÓÃ¼°±àÒë·½·¨
+1.configuer é…ç½®æ–‡ä»¶ä½¿ç”¨åŠç¼–è¯‘æ–¹æ³•
 
-±ÈÈçÕâÒ»ÌõÃüÁî./configure --prefix=/opt/arm/bluez --host=arm-linux --target=arm-linux     CC=arm-linux-gcc --cache-file=arm-linux.cache
-ÃüÁî./configuer  ºóÃæ¸ú²ÎÊıµÄ¾ßÌåÒâË¼
---prefix=$(pwd) °²×°Ä¿Â¼
-pwdÊÇµ±Ç°ÓÃ»§Ä¿Â¼ make installµÄÊ±ºò°²×°ÔÚµ±Ç°ÓÃ»§Ä¿Â¼ÏÂ
+æ¯”å¦‚è¿™ä¸€æ¡å‘½ä»¤./configure --prefix=/opt/arm/bluez --host=arm-linux --target=arm-linux     CC=arm-linux-gcc --cache-file=arm-linux.cache
+å‘½ä»¤./configuer  åé¢è·Ÿå‚æ•°çš„å…·ä½“æ„æ€
+--prefix=$(pwd) å®‰è£…ç›®å½•
+pwdæ˜¯å½“å‰ç”¨æˆ·ç›®å½• make installçš„æ—¶å€™å®‰è£…åœ¨å½“å‰ç”¨æˆ·ç›®å½•ä¸‹
 
---host= Ä¿Ç°±àÒë³öÀ´µÄ³ÌĞòÔÚÄÄÀïÅÜ £¿ ËùÒÔ¹¤¾ßÁ´ºÃÁËÖ®ºó£¬¸øÄ¿±êÏµÍ³±àÒë³ÌĞòÈ«²¿ÊÇÉèÖÃhostÎªarmµÄ¡£Èç¹ûÃ»ÓĞÖ¸¶¨,½«»áÔËĞĞ`config.guess¡¯À´¼ì²â.
+--host= ç›®å‰ç¼–è¯‘å‡ºæ¥çš„ç¨‹åºåœ¨å“ªé‡Œè·‘ ï¼Ÿ æ‰€ä»¥å·¥å…·é“¾å¥½äº†ä¹‹åï¼Œç»™ç›®æ ‡ç³»ç»Ÿç¼–è¯‘ç¨‹åºå…¨éƒ¨æ˜¯è®¾ç½®hostä¸ºarmçš„ã€‚å¦‚æœæ²¡æœ‰æŒ‡å®š,å°†ä¼šè¿è¡Œ`config.guessâ€™æ¥æ£€æµ‹.
 
 
---target=ÎªË­±àÒë³ÌĞò£¬ÕâÔÚ½»²æ±àÒëµÄÊ±ºò¸úhostÒ»¸öÒâË¼£¬Èç¹ûÃ»ÓĞÖ¸¶¨,Ä¬ÈÏ½«Ê¹ÓÃ¡¯--host¡¯Ñ¡ÏîµÄÖµ
+--target=ä¸ºè°ç¼–è¯‘ç¨‹åºï¼Œè¿™åœ¨äº¤å‰ç¼–è¯‘çš„æ—¶å€™è·Ÿhostä¸€ä¸ªæ„æ€ï¼Œå¦‚æœæ²¡æœ‰æŒ‡å®š,é»˜è®¤å°†ä½¿ç”¨â€™--hostâ€™é€‰é¡¹çš„å€¼
 
 --cache-file=FILE
-¡®configure¡¯»áÔÚÄãµÄÏµÍ³ÉÏ²âÊÔ´æÔÚµÄÌØĞÔ(»òÕßbug!).ÎªÁË¼ÓËÙËæºó½øĞĞµÄÅäÖÃ,²âÊÔµÄ½á¹û»á´æ´¢ÔÚÒ»¸öcache fileÀï.µ±configureÒ»¸öÃ¿¸ö×ÓÊ÷Àï¶¼ÓĞ¡¯configure¡¯½Å±¾µÄ¸´ÔÓµÄÔ´ÂëÊ÷Ê±,Ò»¸öºÜºÃµÄcache fileµÄ´æÔÚ»áÓĞºÜ´ó°ïÖú.
+â€˜configureâ€™ä¼šåœ¨ä½ çš„ç³»ç»Ÿä¸Šæµ‹è¯•å­˜åœ¨çš„ç‰¹æ€§(æˆ–è€…bug!).ä¸ºäº†åŠ é€Ÿéšåè¿›è¡Œçš„é…ç½®,æµ‹è¯•çš„ç»“æœä¼šå­˜å‚¨åœ¨ä¸€ä¸ªcache fileé‡Œ.å½“configureä¸€ä¸ªæ¯ä¸ªå­æ ‘é‡Œéƒ½æœ‰â€™configureâ€™è„šæœ¬çš„å¤æ‚çš„æºç æ ‘æ—¶,ä¸€ä¸ªå¾ˆå¥½çš„cache fileçš„å­˜åœ¨ä¼šæœ‰å¾ˆå¤§å¸®åŠ©.
 
 
---help ´òÓ¡°ïÖúĞÅÏ¢
+--help æ‰“å°å¸®åŠ©ä¿¡æ¯
 
 --bindir=DIR
-Ö¸¶¨¶ş½øÖÆÎÄ¼şµÄ°²×°Î»ÖÃ.ÕâÀïµÄ¶ş½øÖÆÎÄ¼ş¶¨ÒåÎª¿ÉÒÔ±»ÓÃ»§Ö±½ÓÖ´ĞĞµÄ³ÌĞò.
+æŒ‡å®šäºŒè¿›åˆ¶æ–‡ä»¶çš„å®‰è£…ä½ç½®.è¿™é‡Œçš„äºŒè¿›åˆ¶æ–‡ä»¶å®šä¹‰ä¸ºå¯ä»¥è¢«ç”¨æˆ·ç›´æ¥æ‰§è¡Œçš„ç¨‹åº.
 
 --sbindir=DIR
-Ö¸¶¨³¬¼¶¶ş½øÖÆÎÄ¼şµÄ°²×°Î»ÖÃ.ÕâÊÇÒ»Ğ©Í¨³£Ö»ÄÜÓÉ³¬¼¶ÓÃ»§Ö´ĞĞµÄ³ÌĞò.
+æŒ‡å®šè¶…çº§äºŒè¿›åˆ¶æ–‡ä»¶çš„å®‰è£…ä½ç½®.è¿™æ˜¯ä¸€äº›é€šå¸¸åªèƒ½ç”±è¶…çº§ç”¨æˆ·æ‰§è¡Œçš„ç¨‹åº.
 
 --includedir=DIR
-Ö¸¶¨CÍ·ÎÄ¼şµÄ°²×°Î»ÖÃ.ÆäËûÓïÑÔÈçC++µÄÍ·ÎÄ¼şÒ²¿ÉÒÔÊ¹ÓÃ´ËÑ¡Ïî.
+æŒ‡å®šCå¤´æ–‡ä»¶çš„å®‰è£…ä½ç½®.å…¶ä»–è¯­è¨€å¦‚C++çš„å¤´æ–‡ä»¶ä¹Ÿå¯ä»¥ä½¿ç”¨æ­¤é€‰é¡¹.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2.linux Ñ¹ËõÎÄ¼şÓë½âÑ¹ËõÃüÁî
+2.linux å‹ç¼©æ–‡ä»¶ä¸è§£å‹ç¼©å‘½ä»¤
 
 
-tarÃüÁî
+tarå‘½ä»¤
 
-¡¡¡¡½â°ü£ºtar zxvf FileName.tar
+ã€€ã€€è§£åŒ…ï¼štar zxvf FileName.tar
 
-¡¡¡¡´ò°ü£ºtar czvf FileName.tar DirName
+ã€€ã€€æ‰“åŒ…ï¼štar czvf FileName.tar DirName
 
-gzÃüÁî
+gzå‘½ä»¤
 
-¡¡¡¡½âÑ¹1£ºgunzip FileName.gz
+ã€€ã€€è§£å‹1ï¼šgunzip FileName.gz
 
-¡¡¡¡½âÑ¹2£ºgzip -d FileName.gz
+ã€€ã€€è§£å‹2ï¼šgzip -d FileName.gz
 
-¡¡¡¡Ñ¹Ëõ£ºgzip FileName
+ã€€ã€€å‹ç¼©ï¼šgzip FileName
 
-¡¡¡¡.tar.gz ºÍ .tgz
+ã€€ã€€.tar.gz å’Œ .tgz
 
-¡¡¡¡½âÑ¹£ºtar zxvf FileName.tar.gz
+ã€€ã€€è§£å‹ï¼štar zxvf FileName.tar.gz
 
-¡¡¡¡Ñ¹Ëõ£ºtar zcvf FileName.tar.gz DirName
+ã€€ã€€å‹ç¼©ï¼štar zcvf FileName.tar.gz DirName
 
-   Ñ¹Ëõ¶à¸öÎÄ¼ş£ºtar zcvf FileName.tar.gz DirName1 DirName2 DirName3 ...
+   å‹ç¼©å¤šä¸ªæ–‡ä»¶ï¼štar zcvf FileName.tar.gz DirName1 DirName2 DirName3 ...
 
-bz2ÃüÁî
+bz2å‘½ä»¤
 
-¡¡¡¡½âÑ¹1£ºbzip2 -d FileName.bz2
+ã€€ã€€è§£å‹1ï¼šbzip2 -d FileName.bz2
 
-¡¡¡¡½âÑ¹2£ºbunzip2 FileName.bz2
+ã€€ã€€è§£å‹2ï¼šbunzip2 FileName.bz2
 
-¡¡¡¡Ñ¹Ëõ£º bzip2 -z FileName
+ã€€ã€€å‹ç¼©ï¼š bzip2 -z FileName
 
-¡¡¡¡.tar.bz2
+ã€€ã€€.tar.bz2
 
-¡¡¡¡½âÑ¹£ºtar jxvf FileName.tar.bz2
+ã€€ã€€è§£å‹ï¼štar jxvf FileName.tar.bz2
 
-¡¡¡¡Ñ¹Ëõ£ºtar jcvf FileName.tar.bz2 DirName
+ã€€ã€€å‹ç¼©ï¼štar jcvf FileName.tar.bz2 DirName
 
-bzÃüÁî
+bzå‘½ä»¤
 
-¡¡¡¡½âÑ¹1£ºbzip2 -d FileName.bz
+ã€€ã€€è§£å‹1ï¼šbzip2 -d FileName.bz
 
-¡¡¡¡½âÑ¹2£ºbunzip2 FileName.bz
+ã€€ã€€è§£å‹2ï¼šbunzip2 FileName.bz
 
-¡¡¡¡Ñ¹Ëõ£ºÎ´Öª
+ã€€ã€€å‹ç¼©ï¼šæœªçŸ¥
 
-¡¡¡¡.tar.bz
+ã€€ã€€.tar.bz
 
-¡¡¡¡½âÑ¹£ºtar jxvf FileName.tar.bz
+ã€€ã€€è§£å‹ï¼štar jxvf FileName.tar.bz
 
-ZÃüÁî
+Zå‘½ä»¤
 
-¡¡¡¡½âÑ¹£ºuncompress FileName.Z
+ã€€ã€€è§£å‹ï¼šuncompress FileName.Z
 
-¡¡¡¡Ñ¹Ëõ£ºcompress FileName
+ã€€ã€€å‹ç¼©ï¼šcompress FileName
 
-¡¡¡¡.tar.Z
+ã€€ã€€.tar.Z
 
-¡¡¡¡½âÑ¹£ºtar Zxvf FileName.tar.Z
+ã€€ã€€è§£å‹ï¼štar Zxvf FileName.tar.Z
 
-¡¡¡¡Ñ¹Ëõ£ºtar Zcvf FileName.tar.Z DirName
+ã€€ã€€å‹ç¼©ï¼štar Zcvf FileName.tar.Z DirName
 
-zipÃüÁî
+zipå‘½ä»¤
 
-¡¡¡¡½âÑ¹£ºunzip FileName.zip
+ã€€ã€€è§£å‹ï¼šunzip FileName.zip
 
-¡¡¡¡Ñ¹Ëõ£ºzip FileName.zip DirName
+ã€€ã€€å‹ç¼©ï¼šzip FileName.zip DirName
 
-
-
-
+æŸ¥çœ‹å½“å‰ç›®å½•çš„å¤§å°
+è¿›å…¥è¯¥ç›®å½• du -sh
