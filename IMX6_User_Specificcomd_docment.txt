@@ -37,7 +37,11 @@ numid=6,iface=MIXER,name='MIXINR PGA Volume'  这个是录音增益调节一共�
 输入命令amixer cset name='MIXINR PGA Volume' 5
 
 
-
+------------------------------------------------wm8962寄存器写入后显示---------------------------
+进入这个位置root@imx6qdlsolo:/sys/kernel/debug/regmap/0-001a# 
+5293:8580前面是寄存器偏移 后面是寄存器值
+echo Y > cache bypasss 绕过缓存写寄存器
+用wolfson的wm89系列芯片的时候 可以修改linux内核drivers/base/regmap/regmap.c文件里面的#define LOG_DEVICE "0-001a" 来设置寄存器打印输出，这样在使用录音和播放命令的时候就会在log上面打印出相应的寄存器状态如果不想log输出太多眼花缭乱可以屏蔽//#define LOG_DEVICE "0-001a"该宏
 
 
 --------------------------------------------------查看IMX6的设备唯一ID号---------------------------------
