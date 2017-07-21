@@ -1,101 +1,130 @@
-1.configuer �����ļ�ʹ�ü����뷽��
+1.configuer 配置文件使用及编译方法
 
-������һ������./configure --prefix=/opt/arm/bluez --host=arm-linux --target=arm-linux     CC=arm-linux-gcc --cache-file=arm-linux.cache
-����./configuer  ����������ľ�����˼
---prefix=$(pwd) ��װĿ¼
-pwd�ǵ�ǰ�û�Ŀ¼ make install��ʱ��װ�ڵ�ǰ�û�Ŀ¼��
+比如这一条命令./configure --prefix=/opt/arm/bluez --host=arm-linux --target=arm-linux     CC=arm-linux-gcc --cache-file=arm-linux.cache
+命令./configuer  后面跟参数的具体意思
+--prefix=$(pwd) 安装目录
+pwd是当前用户目录 make install的时候安装在当前用户目录下
 
---host= Ŀǰ��������ĳ����������� �� ���Թ���������֮�󣬸�Ŀ��ϵͳ�������ȫ��������hostΪarm�ġ����û��ָ��,��������`config.guess�������.
+--host= 目前编译出来的程序在哪里跑 ？ 所以工具链好了之后，给目标系统编译程序全部是设置host为arm的。如果没有指定,将会运行`config.guess’来检测.
 
 
---target=Ϊ˭����������ڽ�������ʱ���hostһ����˼�����û��ָ��,Ĭ�Ͻ�ʹ�á�--host��ѡ���ֵ
+--target=为谁编译程序，这在交叉编译的时候跟host一个意思，如果没有指定,默认将使用’--host’选项的值
 
 --cache-file=FILE
-��configure���������ϵͳ�ϲ��Դ��ڵ�����(����bug!).Ϊ�˼��������е�����,���ԵĽ����洢��һ��cache file��.��configureһ��ÿ�������ﶼ�С�configure���ű��ĸ��ӵ�Դ����ʱ,һ���ܺõ�cache file�Ĵ��ڻ��кܴ����.
+‘configure’会在你的系统上测试存在的特性(或者bug!).为了加速随后进行的配置,测试的结果会存储在一个cache file里.当configure一个每个子树里都有’configure’脚本的复杂的源码树时,一个很好的cache file的存在会有很大帮助.
 
 
---help ��ӡ������Ϣ
+--help 打印帮助信息
 
 --bindir=DIR
-ָ���������ļ��İ�װλ��.����Ķ������ļ�����Ϊ���Ա��û�ֱ��ִ�еĳ���.
+指定二进制文件的安装位置.这里的二进制文件定义为可以被用户直接执行的程序.
 
 --sbindir=DIR
-ָ�������������ļ��İ�װλ��.����һЩͨ��ֻ���ɳ����û�ִ�еĳ���.
+指定超级二进制文件的安装位置.这是一些通常只能由超级用户执行的程序.
 
 --includedir=DIR
-ָ��Cͷ�ļ��İ�װλ��.����������C++��ͷ�ļ�Ҳ����ʹ�ô�ѡ��.
+指定C头文件的安装位置.其他语言如C++的头文件也可以使用此选项.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2.linux ѹ���ļ����ѹ������
+2.linux 压缩文件与解压缩命令
 
 
-tar����
+tar命令
 
-���������tar zxvf FileName.tar
+　　解包：tar zxvf FileName.tar
 
-���������tar czvf FileName.tar DirName
+　　打包：tar czvf FileName.tar DirName
 
-gz����
+gz命令
 
-������ѹ1��gunzip FileName.gz
+　　解压1：gunzip FileName.gz
 
-������ѹ2��gzip -d FileName.gz
+　　解压2：gzip -d FileName.gz
 
-����ѹ����gzip FileName
+　　压缩：gzip FileName
 
-����.tar.gz �� .tgz
+　　.tar.gz 和 .tgz
 
-������ѹ��tar zxvf FileName.tar.gz
+　　解压：tar zxvf FileName.tar.gz
 
-����ѹ����tar zcvf FileName.tar.gz DirName
+　　压缩：tar zcvf FileName.tar.gz DirName
 
-   ѹ������ļ���tar zcvf FileName.tar.gz DirName1 DirName2 DirName3 ...
+   压缩多个文件：tar zcvf FileName.tar.gz DirName1 DirName2 DirName3 ...
 
-bz2����
+bz2命令
 
-������ѹ1��bzip2 -d FileName.bz2
+　　解压1：bzip2 -d FileName.bz2
 
-������ѹ2��bunzip2 FileName.bz2
+　　解压2：bunzip2 FileName.bz2
 
-����ѹ���� bzip2 -z FileName
+　　压缩： bzip2 -z FileName
 
-����.tar.bz2
+　　.tar.bz2
 
-������ѹ��tar jxvf FileName.tar.bz2
+　　解压：tar jxvf FileName.tar.bz2
 
-����ѹ����tar jcvf FileName.tar.bz2 DirName
+　　压缩：tar jcvf FileName.tar.bz2 DirName
 
-bz����
+bz命令
 
-������ѹ1��bzip2 -d FileName.bz
+　　解压1：bzip2 -d FileName.bz
 
-������ѹ2��bunzip2 FileName.bz
+　　解压2：bunzip2 FileName.bz
 
-����ѹ����δ֪
+　　压缩：未知
 
-����.tar.bz
+　　.tar.bz
 
-������ѹ��tar jxvf FileName.tar.bz
+　　解压：tar jxvf FileName.tar.bz
 
-Z����
+Z命令
 
-������ѹ��uncompress FileName.Z
+　　解压：uncompress FileName.Z
 
-����ѹ����compress FileName
+　　压缩：compress FileName
 
-����.tar.Z
+　　.tar.Z
 
-������ѹ��tar Zxvf FileName.tar.Z
+　　解压：tar Zxvf FileName.tar.Z
 
-����ѹ����tar Zcvf FileName.tar.Z DirName
+　　压缩：tar Zcvf FileName.tar.Z DirName
 
-zip����
+zip命令
 
-������ѹ��unzip FileName.zip
+　　解压：unzip FileName.zip
 
-����ѹ����zip FileName.zip DirName
+　　压缩：zip FileName.zip DirName
+
+查看当前目录的大小
+进入该目录 du -sh
+
+字符串查找
+grep -rn “xxxxx" 
+-r是递归查找 n是显示行号 ./是在当前目录下查找所以子目录里面的字符串   xxxxx是要查找的字符串 比如我就是要查找xxxxx
+
+vim 命令
+：n，$s/vivian/sky/ 替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky 
 
 
 
 
+------------------------------------嵌入式linux I2C命令工具使用-------------------------------------------------
+命令 i2cdetect：用來看有多少个I2C总线可以使用
+           执行i2cdetect -l
+显示 -----  i2c-0   i2c             21a0000.i2c                             I2C adapter
+            i2c-1   i2c             21a4000.i2c                             I2C adapter
+            i2c-2   i2c             21a8000.i2c                             I2C adapter
+            证明了该板子上有3条I2C总线可以用
+            
+命令 i2cdetect ：还可以用来查看I2C总线上挂了哪些设备，这个命令同时帮助我们识别I2C总线是否成功和设备通信了。
+           执行i2cdetect -y  0
+           -y为一个可选参数
+           0为选择I2C总线1,如果有I2C总线2，想检查i2c2上面的设备 就执行i2cdetect -y  2
+显示-------
+    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+该表示0x1a上面有一个I2C设备，我这里是wm8960音频芯片，地址是0x1a ，uu就是代表该有设备  --代表该地址没有设备
