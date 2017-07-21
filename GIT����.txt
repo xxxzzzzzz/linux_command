@@ -33,9 +33,9 @@ git 提交有三部 先将test.c文件git add到暂存区， 如果突然想通了可以git rm --cached
 
 1，or push an existing repository from the command line看这个位置的命令
  在help下输入ssh 第一个网页https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-用这个ssh-keygen -t rsa -b 4096 -C "your_email@example.com" 生产了.ssh
+1.2在root用户下执行这个命令ssh-keygen -t rsa -b 4096 -C "your_email@example.com"  就会在root目录下生成.ssh
 
-2，将ubuntu里面。ssh目录里面的id_rsa.pub这个配置文件拷出来到ssh and GPG keys
+2，将ubuntu root目录下的.ssh目录里面的id_rsa.pub这个配置文件拷出来到ssh and GPG keys
 
 然后选择ssh协议的仓库地址 就可以开始推代码和啦代码了
 
