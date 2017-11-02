@@ -108,7 +108,16 @@ find -name "ss"
 这样find命令就会查找我整个linux系统里面，那个地方有ss名字的文件或者目录
 
 vim 命令
-：n，$s/vivian/sky/ 替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky 
+：n，$s/vivian/sky/ 替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky
+
+linux设置root密码
+linux很多系统设置密码都是passwd，但是要在终端手动敲入密码
+用chpasswd命令可以解决系统自动设置密码问题
+echo root:'ttxs9999' | chpasswd         //这样一段命令就是给root用户设置密码，密码为ttxs9999
+
+
+
+
 
 
 
