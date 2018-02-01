@@ -116,8 +116,12 @@ linux很多系统设置密码都是passwd，但是要在终端手动敲入密码
 echo root:'ttxs9999' | chpasswd         //这样一段命令就是给root用户设置密码，密码为ttxs9999
 
 
-
-
+在Cramfs文件系统里面很多目录都是只读权限，为了解决有时候要用目录的写权限，在系统启动后要想办法将目录做成零时写的权限
+mount -t tmpfs tmfsp  xxxx(文件)
+比如我要将hello目录改成写权限
+mount -t tmpfs tmfsp hello
+比如我要将xxzz目录改成写权限
+mount -t tmpfs tmfsp xxzz
 
 
 
