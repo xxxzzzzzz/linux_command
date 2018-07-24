@@ -34,7 +34,7 @@ tar命令
 
 　　解包：tar zxvf FileName.tar
 
-　　打包：tar czvf FileName.tar DirName
+　　打包：tar -czvf FileName.tar.gz DirName
 
 gz命令
 
