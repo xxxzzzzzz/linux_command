@@ -86,6 +86,15 @@ git push -u origin master 上传
 如果出现git pull就证明了本地目录和github上面的目录不同步
 就需要git pull origin master 将github目录文件格式拉回本地目录，使它们目录排列方式一致
 
+2024年之后我发现 git push -u origin master 
+Username for 'https://github.com': xxxzzzzzz 
+Password for 'https://xxxzzzzzz@github.com':  
+输入用户和密码之后fatal: Authentication failed for 'https://github.com/xxxzzzzzz 会报这个错误
+这是因为2024年之后git push 上传方式的密码采用令牌包实现了。
+https://blog.csdn.net/m0_73156359/article/details/135585372 这个博客有讲生成令牌的方式，
+这是ghp_AWDUkLZf3Yztr...我生成的令牌，记住是将git生成的令牌复制下来自己用txt文本保存好。
+然后再次git push -u origin master  之后，输入用户名，至于密码就粘贴ghp_AWDUkLZf3Yztr...令牌码
+
 
 
 
